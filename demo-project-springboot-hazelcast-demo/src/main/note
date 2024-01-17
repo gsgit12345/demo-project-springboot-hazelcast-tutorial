@@ -1,0 +1,10 @@
+https://docs.hazelcast.com/hazelcast/5.3/spring/configuration
+https://www.youtube.com/watch?v=sleVH6BIR9M  --tutorial
+https://github.com/azizunsal/SpringBoot-BoneCP-PooledDataSource/blob/master/pom.xml
+https://www.deps.co/guides/add-oracle-ojdbc6-jars-to-maven/  --installing jar at local maven repository
+below is the command to install oracle in local maven repository
+
+ mvn install:install-file -Dfile=D:\ghanshyam\software\ojdbc8.jar -DgroupId=com.oracle
+	-DartifactId=ojdbc6 -Dversion=11.2.0.1.0 -Dpackaging=jar
+
+java -Dserver.port=8083 -jar demo-project-springboot-hazelcast-demo-0.0.1-SNAPSHOT.jar

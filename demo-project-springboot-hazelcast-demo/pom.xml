@@ -19,6 +19,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <springboot.version>3.2.1</springboot.version>
+
     </properties>
 
     <dependencies>
@@ -37,17 +39,38 @@
             <artifactId>hibernate-core</artifactId>
             <version>6.1.4.Final</version>
         </dependency>
+        <!--
         <dependency>
             <groupId>com.oracle.jdbc</groupId>
             <artifactId>ojdbc</artifactId>
-            <version>8</version>
+           <version>8</version>
             <scope>system</scope>
             <systemPath>D:\ghanshyam\software\ojdbc8.jar</systemPath>
         </dependency>
+-->
+
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc8</artifactId>
+            <version>11.2.0.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast-all</artifactId>
+            <version>3.5.5</version>
+        </dependency>
 
     </dependencies>
-
     <build>
-
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.example.hazzelcast.BankApplication</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>

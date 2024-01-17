@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "UserAccount")
 public class UserAccount {
-
+//https://www.youtube.com/watch?v=cO5Pb4bqGCY
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
